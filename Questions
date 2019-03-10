@@ -1,0 +1,23 @@
+1. Identify first that the issue happen, or it just user feeling, using https://www.webpagetest.org/ to test web page response.
+  Then check servers status like cpu memory disk and network, findout is it web-application problem ?
+  Go to application log to find the error, if not found any error , restart the web-application
+  If found the error send the error to developer to fix it asap.
+  During developer working try to restart web-application and monitor.
+  By the way , we should have N to N application monitoring to identify and fix the problem faster
+  
+2. The problem of single web server is "Single point of failure".
+  We should have multiple web servers and database to keep user stage.
+  Then we can have many data center to support across data center services.
+      [Web app]   [Web app]                   [Web app]   [Web app]
+          \           /                           \           /
+           \         /                             \         /
+            \       /                               \       /
+           [Database]------------------------------[Database]
+           
+3. In all servers I will install "Telegraf" to keep statistics of resource and processes
+  and use "Grafana" to monitoring and alert
+ 
+ 
+4. please see in adduser
+
+5. please see in ip_finder.sh
